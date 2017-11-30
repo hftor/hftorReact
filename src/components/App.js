@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Avatar} from './Avatar.js'
-import Devicons from './DevIcons.js';
+import {DevIcons} from './DevIcons.js';
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Welcome to Hafþór's react app</h2>
         </div>
-        <Devicons/>
+        <DevIcons icon="react"/>
         <Avatar name="hftor"/>
       </div>
     );
