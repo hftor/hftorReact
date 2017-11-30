@@ -8,7 +8,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Welcome to Hafþór's react app</h2>
         </div>
-        <Avatar/>
+        <Avatar name="hftor"/>
       </div>
     );
   }

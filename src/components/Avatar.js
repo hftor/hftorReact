@@ -3,9 +3,10 @@ import { Get } from 'react-axios'
 
 export class Avatar extends Component{
   render() {
+    var url = "https://api.github.com/users/" + this.props.name;
     return (
       <div>
-        <Get url="https://api.github.com/users/hftor">
+        <Get url={url}>
           {(error, response, isLoading, onReload) => {
             if(error) {
               // TODO
