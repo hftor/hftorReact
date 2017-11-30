@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Get } from 'react-axios'
 
-export class Avatar extends Component{
+export class GitApi extends Component{
   render() {
     return (
       <div>
@@ -9,10 +9,9 @@ export class Avatar extends Component{
           {(error, response, isLoading, onReload) => {
             if(error) {
               // TODO
-              return (<div>Something bad happened</div>)
+              return (<div>Something bad happened: {error.message} <button onClick={() => onReload({ params: { reload: true } })}>Retry</button></div>)
             }
             else if(isLoading) {
-              // TODO
               return (<div>Loading...</div>)
             }
             else if(response !== null) {
