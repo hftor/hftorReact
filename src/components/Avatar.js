@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Get } from 'react-axios'
+require('../css/main.scss');
 
 export class Avatar extends Component{
   render() {
