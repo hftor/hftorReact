@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Avatar} from './Avatar.js'
 import {DevIcons} from './DevIcons.js';
+import {ListOfRepos} from './ListOfRepos.js'
 require('../css/main.scss');
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
         </div>
         <DevIcons icon="react"/>
         <Avatar name="hftor"/>
+        <ListOfRepos name="hftor"/>
       </div>
     );
   }
