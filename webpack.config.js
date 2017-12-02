@@ -1,5 +1,8 @@
-
 var path = require("path");
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var extractTextPlugin = new ExtractTextPlugin({
+  filename: 'main.css'
+});
 
 var DIST_DIR = path.resolve(__dirname, "dist");
 var SRC_DIR = path.resolve(__dirname, "src");
@@ -24,9 +27,18 @@ var config = {
             {
               test: /\.svg$/,
               use: 'raw-loader'
+            },
+            {
+              test: /\.scss$/,
+              use: extractTextPlugin.extract({
+                use:['css-loader', 'sass-loader']
+              })
             }
         ]
-    }
+    },
+    plugins:[
+      extractTextPlugin
+    ]
 };
 
 module.exports = config;
